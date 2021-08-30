@@ -1,6 +1,7 @@
 # Art of Code Dojo 4 - String Calculator
 
 On this session we'll build a string calculator with support to the sum operation with TypeScript and time slot pairing.
+The focus of this session is to practice and experiment with TypeScript. The tests were already written ahead of time and will guide you 'step-by-step' to implement the kata.
 
 ## Table of contents
 - [Getting started with this repository](#getting-started-with-this-repository)
@@ -19,5 +20,3 @@ This repo has a tutorial that can help you getting started with the session, to 
 After cloning, run `npm install` on the root of this repository to install all necessary dependencies.
 
 To run tests, you can use the `npm run test` command. If you want to enable file watch, so the tests re-run automatically after saving a file, you can use the `npm run test:watch` command.
-
-The test framework is configured to look for files inside of the `src` folder and to look for test files with the `.spec.js` extension.
