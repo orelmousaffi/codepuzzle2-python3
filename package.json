@@ -4,8 +4,8 @@
   "description": "Base project to work with typescript and jest.",
   "main": "index.ts",
   "scripts": {
-    "test": "jest --runInBand",
-    "test:watch": "jest --runInBand --watchAll",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts -b",
+    "test:watch": "mocha -r ts-node/register src/**/*.spec.ts -b -w",
     "cover": "jest --coverage"
   },
   "repository": {
@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/pedrostc/typescript-jest-base#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.4"
   }
 }
