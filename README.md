@@ -7,7 +7,7 @@ The focus of this session is to practice and experiment with TypeScript. The tes
 - [Getting started with this repository](#getting-started-with-this-repository)
 - [Coding Challenge - String Calculator](CHALLENGE.md)
 - [How to pair program remotely](docs/how-to-pair-program-remotely.md)
-- [Time slot Pairing](docs/time-slot-pairing.md)
+- [Timed Driver-Navigator Pairing](docs/timed-driver-navigator-pairing.md)
 - [Typescript Testing](docs/testing-in-typescript.md)
 
 ## Getting started with this repository
