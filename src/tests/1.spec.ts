@@ -1,9 +1,9 @@
 import add from "../calculator";
-import { ChallengeStep, escapeNewLines } from "./utils";
+import { IChallengeStep, EscapeNewLines } from "./utils";
 import { expect } from 'chai';
 import 'mocha';
 
-const steps: ChallengeStep[] = [
+const steps: IChallengeStep[] = [
     { Title: "given an empty string should return", TestCases: [{Input: "", Expected: 0}]},
     { Title: "given a string with a single value should return the same value", TestCases: [{Input: "42", Expected: 42}]},
     { Title: "given a string with two comma separated values should return the sum of them", TestCases: [{Input: "2,2", Expected: 4}]},
@@ -14,7 +14,7 @@ const steps: ChallengeStep[] = [
 steps.forEach((step, stepIndex) => {
     describe(`Step ${stepIndex} - ${step.Title}`, () => {
         step.TestCases.forEach((testCase, testCaseIndex) => {
-            it(`input: "${escapeNewLines(testCase.Input)}"; expected: ${testCase.Expected}`, () => {
+            it(`input: "${EscapeNewLines(testCase.Input)}"; expected: ${testCase.Expected}`, () => {
                 expect(add(testCase.Input)).to.equal(testCase.Expected);
             });
         });

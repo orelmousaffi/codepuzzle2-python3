@@ -1,22 +1,13 @@
-export function formatTestName(
-    step: number,
-    testCaseIndex: number,
-    testName: string,
-    input: string,
-    expected: number) {
-    return `Step ${step}.${testCaseIndex + 1} - ${testName}.\n\tinput: "${escapeNewLines(input)}"; expected: ${expected}`;
-}
-
-export function escapeNewLines(text: string): string {
+export function EscapeNewLines(text: string): string {
     return text.replace('\n', '\\n');
 }
 
-export interface ChallengeStep {
+export interface IChallengeStep {
     Title: string;
-    TestCases: TestCase[];
+    TestCases: ITestCase[];
 }
 
-export interface TestCase {
+export interface ITestCase {
     Input: string;
     Expected: number;
 }
