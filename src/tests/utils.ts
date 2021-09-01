@@ -4,10 +4,19 @@ export function EscapeNewLines(text: string): string {
 
 export interface IChallengeStep {
     Title: string;
-    TestCases: ITestCase[];
+    TestCases: TestCase[];
 }
 
-export interface ITestCase {
+export type TestCase = IErrorTestCase | IValueTestCase;
+
+interface IBaseTestCase {
     Input: string;
+}
+
+export interface IErrorTestCase extends IBaseTestCase {
+    Error: string;
+}
+
+export interface IValueTestCase extends IBaseTestCase {
     Expected: number;
 }
