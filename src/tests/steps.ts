@@ -9,7 +9,6 @@ export const steps: IChallengeStep[] = [
         Title: "given a string with a single value should return the same value",
         TestCases: [
             { Input: "0", Expected: 0 },
-            { Input: "-1", Expected: -1 },
             { Input: "5", Expected: 5 },
             { Input: "42", Expected: 42 }
         ]
@@ -46,6 +45,15 @@ export const steps: IChallengeStep[] = [
             { Input: "//-\n1-2-3-4-5", Expected: 15 },
             { Input: "///\n4/6/3/7/1/1/1/1/8/1/9", Expected: 42 },
             { Input: "//&\n1&1&1&1&1&1", Expected: 6 },
+        ]
+    },
+    {
+        Title: "should not accept negative numbers, throwing an error specifying the problematic numbers.",
+        TestCases: [
+            { Input: "1,-2", Error: "negatives not allowed: -2" },
+            { Input: "-1\n-2,3,-4", Error: "negatives not allowed: -1,-2,-4" },
+            { Input: "///\n-4/6/3/-7/1/-1/1/-1/8/1/9", Error: "negatives not allowed: -4,-7,-1,-1" },
+            { Input: "//-\n-1--2-1--10", Error: "negatives not allowed: -1,-2,-10" },
         ]
     },
 ];
