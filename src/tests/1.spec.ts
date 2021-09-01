@@ -14,11 +14,11 @@ steps.forEach((step, stepIndex) => {
                     try {
                         result = add(testCase.Input);
                     } catch(error) {
-                        expect(error.message).to.equal(testCase.Error);
+                        expect(error.message).to.equal(testCase.Error, "The error was thrown but its message does not match the expected result.");
                         done();
                     }
                     
-                    expect.fail(`An error was expected, but instead the code returned the value: ${result}`);
+                    expect.fail(`An error was expected to be thrown, but instead the code returned the value: ${result}`);
                 }); 
             } else {
                 it(`Test Case ${testCaseIndex + 1} - input: "${EscapeNewLines(testCase.Input)}"; expected value: ${testCase.Expected}`, () => {
