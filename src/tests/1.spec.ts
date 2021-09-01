@@ -1,5 +1,5 @@
 import add from "../calculator";
-import { EscapeNewLines, IErrorTestCase, IValueTestCase } from "./utils";
+import { EscapeNewLines } from "./utils";
 import { expect } from 'chai';
 import 'mocha';
 import { steps } from "./steps";
