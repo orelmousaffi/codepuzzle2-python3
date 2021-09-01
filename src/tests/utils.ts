@@ -1,5 +1,5 @@
 export function EscapeNewLines(text: string): string {
-    return text.replace('\n', '\\n');
+    return text.replace(/\n/gi, '\\n');
 }
 
 export interface IChallengeStep {
