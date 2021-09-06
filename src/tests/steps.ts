@@ -2,7 +2,7 @@ import { IChallengeStep } from "./utils";
 
 export const steps: IChallengeStep[] = [
     {
-        Title: "given an empty string should return",
+        Title: "given an empty string should return. add(\"\") = 0",
         TestCases: [{ Input: "", Expected: 0 }]
     },
     {
@@ -56,4 +56,13 @@ export const steps: IChallengeStep[] = [
             { Input: "//*\n-1*-2-1*-10", Error: "negatives not allowed: -1,-2,-10" },
         ]
     },
+    {
+        Title: "should ignore (not add) numbers greater than 1000.",
+        TestCases: [
+            { Input: "1001,2", Expected: 2 },
+            { Input: "1000,2", Expected: 1002 },
+            { Input: "///\n2000/6/1/1/1234/5/3000/8/1/9", Expected: 31 },
+            { Input: "1\n2000,1\n10", Expected: 12 },
+        ]
+    }
 ];
