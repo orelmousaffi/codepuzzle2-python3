@@ -53,7 +53,7 @@ export const steps: IChallengeStep[] = [
             { Input: "1,-2", Error: "negatives not allowed: -2" },
             { Input: "-1\n-2,3,-4", Error: "negatives not allowed: -1,-2,-4" },
             { Input: "///\n-4/6/3/-7/1/-1/1/-1/8/1/9", Error: "negatives not allowed: -4,-7,-1,-1" },
-            { Input: "//-\n-1--2-1--10", Error: "negatives not allowed: -1,-2,-10" },
+            { Input: "//*\n-1*-2-1*-10", Error: "negatives not allowed: -1,-2,-10" },
         ]
     },
 ];
