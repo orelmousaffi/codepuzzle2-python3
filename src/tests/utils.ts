@@ -8,7 +8,7 @@ export function FormatTestCaseName(stepNbr: number, testCaseNbr: number, testCas
 
 function formatTestCaseExpectedText(testCase: TestCase): string {
     // duplicating the conditional here to make the transpiler happy.
-    // it will fail to transpile and run the tests if we perfrom the conditional in a separate variable and use that stored result instead.
+    // it will fail to transpile and run the tests if we perform the conditional in a separate variable or function.
     const whatsExpected = "Error" in testCase ? "error" : "value";
     const expectedResult = "Error" in testCase ? testCase.Error : testCase.Expected.toString();
 
