@@ -2,6 +2,19 @@ export function EscapeNewLines(text: string): string {
     return text.replace(/\n/gi, '\\n');
 }
 
+export function FormatTestCaseName(stepNbr: number, testCaseNbr: number, testCase: TestCase): string {
+    return `Test Case ${stepNbr}.${testCaseNbr} - input: "${EscapeNewLines(testCase.Input)}"; ${formatTestCaseExpectedText(testCase)}`;
+}
+
+function formatTestCaseExpectedText(testCase: TestCase): string {
+    // duplicating the conditional here to make the transpiler happy.
+    // it will fail to transpile and run the tests if we perfrom the conditional in a separate variable and use that stored result instead.
+    const whatsExpected = "Error" in testCase ? "error" : "value";
+    const expectedResult = "Error" in testCase ? testCase.Error : testCase.Expected.toString();
+
+    return `expected ${whatsExpected}: ${expectedResult}.`;
+}
+
 export interface IChallengeStep {
     Title: string;
     TestCases: TestCase[];
