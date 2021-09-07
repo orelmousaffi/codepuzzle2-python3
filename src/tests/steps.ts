@@ -39,7 +39,7 @@ export const steps: IChallengeStep[] = [
         ]
     },
     {
-        Title: "should also support any 1 char user defined symbol delimiter using this format: '//[delimiter]\\n[numbers…]'.",
+        Title: "should also support any 1 char user defined symbol delimiter using this format: '//(delimiter)\\n(numbers…)'.",
         TestCases: [
             { Input: "//;\n1;2;3", Expected: 6 },
             { Input: "//-\n1-2-3-4-5", Expected: 15 },
@@ -64,5 +64,24 @@ export const steps: IChallengeStep[] = [
             { Input: "///\n2000/6/1/1/1234/5/3000/8/1/9", Expected: 31 },
             { Input: "1\n2000,1\n10", Expected: 12 },
         ]
-    }
+    },
+    {
+        Title: "should accept multi-character custom delimiter using this format: '//[delimiter]\\n(numbers…)'.",
+        TestCases: [
+            { Input: "//[;;;]\n1;;;2;;;3", Expected: 6 },
+            { Input: "//[delimiter]\n1delimiter2delimiter3delimiter4delimiter5", Expected: 15 },
+            { Input: "//[//]\n4//6//3//7//1//1//1//1//8//1//9", Expected: 42 },
+            { Input: "//[&.?!]\n1&.?!1&.?!1&.?!1&.?!1&.?!1", Expected: 6 },
+            { Input: "//[plus]\n1plus1plus1plus1plus1plus1", Expected: 6 },
+        ]
+    },
+    {
+        Title: "should allow multiple delimiters using this format: '//[delim1][delim2]...\\n(numbers…)'.",
+        TestCases: [
+            { Input: "//[;][*]\n1;2*3", Expected: 6 },
+            { Input: "//[/][**]\n1/2/3**4/5", Expected: 15 },
+            { Input: "//[:)][:(]\n4:)6:)3:(7:)1:(1:(1:(1:)8:)1:)9", Expected: 42 },
+            { Input: "//[+][*][^]\n1^1+1^1*1*1", Expected: 6 },
+        ]
+    },
 ];
