@@ -25,7 +25,7 @@ We're creating a simple string calculator that exports a `add` function. This fu
 5. Allow the `add` funtion to also handle new lines between numbers and not just commas. (`add("1,2\n3")`should return `6`)
 
 6. Add support to different delimiters
-    - To change a delimiter, the beginning of the string will contain a separate line that looks like this: `"//[delimiter]\n[numbers…]"` for example `"//;\n1;2"` should return 3 where the default delimiter is `";"`.
+    - To change a delimiter, the beginning of the string will contain a separate line that looks like this: `"//(delimiter)\n(numbers…)"` for example `"//;\n1;2"` should return 3 where the default delimiter is `";"`.
     - The first line is optional.
     - All existing scenarios should still be supported
 
@@ -33,10 +33,12 @@ We're creating a simple string calculator that exports a `add` function. This fu
     - for example `add("1,-2") -> "negatives not allowed: -2"`
     - If there are multiple negatives, show all of them in the error message.
 
-8. Numbers greater than 1000 should be ignored, so adding 2 + 1001 = 2
+8. Numbers greater than 1000 should be ignored, so adding 2 + 1001 = 2.
 
 9. Delimiters can be of any length with the following format: `"//[delimiter]\n"` for example: `"//[***]\n1***2***3"` should return `6`.
+    - Words are not allowed as delimiters
 
 10. Allow multiple delimiters like this: `"//[delim1][delim2]\n"` for example `"//[*][%]\n1*2%3"` should return `6`.
 
 11. Make sure you can also handle multiple delimiters with length longer than one char
+    - Words are still not allowed as delimiters
