@@ -1,9 +1,9 @@
-export function EscapeNewLines(text: string): string {
-    return text.replace(/\n/gi, '\\n');
+export function FormatTestCaseName(stepNbr: number, testCaseNbr: number, testCase: TestCase): string {
+    return `Test Case ${stepNbr}.${testCaseNbr} - input: "${escapeNewLines(testCase.Input)}"; ${formatTestCaseExpectedText(testCase)}`;
 }
 
-export function FormatTestCaseName(stepNbr: number, testCaseNbr: number, testCase: TestCase): string {
-    return `Test Case ${stepNbr}.${testCaseNbr} - input: "${EscapeNewLines(testCase.Input)}"; ${formatTestCaseExpectedText(testCase)}`;
+function escapeNewLines(text: string): string {
+    return text.replace(/\n/gi, '\\n');
 }
 
 function formatTestCaseExpectedText(testCase: TestCase): string {
