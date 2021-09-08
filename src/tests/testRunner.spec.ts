@@ -1,8 +1,10 @@
-import add from "../calculator";
-import { FormatTestCaseName } from "./utils";
-import { expect } from 'chai';
 import 'mocha';
+import { expect } from 'chai';
+
+import { FormatTestCaseName } from "./utils";
 import { steps } from "./steps";
+
+import add from "../calculator";
 
 steps.forEach((step, stepIndex) => {
     const stepNbr = stepIndex + 1;
