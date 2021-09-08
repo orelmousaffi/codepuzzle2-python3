@@ -1,5 +1,3 @@
-const add = function(input: string) {
-    
+export function add(input: string) {
+    // ADD YOUR CODE HERE :D
 };
-
-export default add;
