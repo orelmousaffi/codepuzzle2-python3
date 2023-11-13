@@ -22,7 +22,7 @@ We're creating a simple string calculator that exports a `add` function. This fu
 
 4. Now allow the `add` function to handle an unknown amount of comma separated numbers.
 
-5. Allow the `add` funtion to also handle new lines between numbers and not just commas. (`add("1,2\n3")`should return `6`)
+5. Allow the `add` function to also handle new lines between numbers and not just commas. (`add("1,2\n3")`should return `6`)
 
 6. Add support to different delimiters
     - To change a delimiter, the beginning of the string will contain a separate line that looks like this: `"//(delimiter)\n(numbers…)"` for example `"//;\n1;2"` should return 3 where the default delimiter is `";"`.

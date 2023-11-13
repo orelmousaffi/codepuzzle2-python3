@@ -1,20 +1,22 @@
 {
-    "files.exclude": {
-        ".vscode/": true,
-        "node_modules/": true,
-        "src/tests/": true,
-        "LICENSE": true,
-        ".gitignore": true,
-        "package.json": true,
-        "package-lock.json": true,
-    },
-    "search.exclude": {
-        ".vscode/": true,
-        "node_modules/": true,
-        "src/tests/": true,
-        "LICENSE": true,
-        ".gitignore": true,
-        "package.json": true,
-        "package-lock.json": true,
-    }
+  "files.exclude": {
+    ".vscode/": true,
+    ".venv/": true,
+    ".pytest_cache/": true,
+    "src/tests/": true,
+    "requirements.txt": true,
+    "LICENSE": true,
+    ".gitignore": true,
+    "**/*/__init__.py": true,
+    "**/*/__pycache__/": true
+  },
+  "search.exclude": {
+    ".vscode/": true,
+    ".venv/": true,
+    "src/tests/": true,
+    "LICENSE": true,
+    ".gitignore": true,
+    "requirements.txt": true,
+    "**/*/__pycache__/": true
+  }
 }
