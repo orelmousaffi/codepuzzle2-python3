@@ -1,14 +1,15 @@
 {
   "files.exclude": {
-    // ".vscode/": true,
-    // ".venv/": true,
-    // ".pytest_cache/": true,
-    // "src/tests/": true,
-    // "requirements.txt": true,
-    // "LICENSE": true,
-    // ".gitignore": true,
-    // "**/*/__init__.py": true,
-    // "**/*/__pycache__/": true
+    ".vscode/": true,
+    ".venv/": true,
+    ".pytest_cache/": true,
+    "src/tests/": true,
+    "requirements.txt": true,
+    "LICENSE": true,
+    ".gitignore": true,
+    "setup.cfg": true,
+    "**/*/__init__.py": true,
+    "**/*/__pycache__/": true
   },
   "search.exclude": {
     ".vscode/": true,
@@ -17,6 +18,7 @@
     "LICENSE": true,
     ".gitignore": true,
     "requirements.txt": true,
+    "setup.cfg": true,
     "**/*/__pycache__/": true
   }
 }
