@@ -5,11 +5,9 @@ from src.calculator import add
 
 @pytest.mark.parametrize(
     ("input", "expected"),
-    [pytest.param("", 0, id="input of 0 to be empty string")],
+    [pytest.param("", 0, id="input of empty string to 0")],
 )
-def test_checks_for_generic_string_(input, expected):
-    print(f"\n > empty string = 0")
-
+def test_checks_for_base_case_(input, expected):
     actual = add(input)
     assert actual == expected
 

@@ -54,4 +54,9 @@ jspm_packages/
 .yarn/install-state.gz
 .pnp.*
 
+# Python
+**/__pycache__/*
+**/.pytest_cache/
+**/__init__.py
+
 # End of https://www.toptal.com/developers/gitignore/api/node
