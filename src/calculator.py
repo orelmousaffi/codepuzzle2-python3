@@ -34,15 +34,15 @@ def add(input: str) -> int:
         return 0
 
     # using the custom split helper, map all string values to integers
-    input = map(int, custom_split(input))
+    numbers = map(int, custom_split(input))
     # filter out numbers over 1000 and convert to list
-    input = filter(lambda x: x <= 1000, input)
-    input = list(input)
+    numbers = filter(lambda x: x <= 1000, numbers)
+    numbers = list(numbers)
 
     # throw an exception if a negative number is found
-    for number in input:
+    for number in numbers:
         if number < 0:
             raise Exception("negative numbers not allowed: " + str(number))
 
     # add all integers in the final list
-    return sum(input)
+    return sum(numbers)
