@@ -2,6 +2,8 @@
   "files.exclude": {
     ".vscode/": true,
     ".venv/": true,
+    ".gitpod.yml": true,
+    "code-puzzles-python/": true,
     ".pytest_cache/": true,
     "src/tests/": true,
     "requirements.txt": true,
@@ -14,6 +16,8 @@
   "search.exclude": {
     ".vscode/": true,
     ".venv/": true,
+    ".gitpod.yml": true,
+    "code-puzzles-python/": true,
     "src/tests/": true,
     "LICENSE": true,
     ".gitignore": true,

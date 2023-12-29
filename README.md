@@ -5,16 +5,16 @@ The focus of this session is to practice and experiment with TypeScript. The tes
 For more informations on the challenge and how to proceed please check the [CHALLENGE.md file.](CHALLENGE.md)
 
 ## Table of contents
-- [Getting started with this repository](#getting-started-with-this-repository)
-- [Coding Challenge - String Calculator](CHALLENGE.md)
-- [How to pair program remotely](docs/how-to-pair-program-remotely.md)
-- [Timed Driver-Navigator Pairing](docs/timed-driver-navigator-pairing.md)
+
+- [Art of Code Dojo 4 - String Calculator](#art-of-code-dojo-4---string-calculator)
+  - [Table of contents](#table-of-contents)
+  - [Getting started with this repository](#getting-started-with-this-repository)
 
 ## Getting started with this repository
-You'll need [Node.Js](https://nodejs.org/) installed to be able to utilize this repository.
 
-After cloning, run `npm install` on the root of this repository to install all necessary dependencies.
+This repository will be setup on `GitPod` which will abstract away the setup process. Once running in the GitPod workspace, follow the steps below:
 
-To run tests use the `npm test` command.
-
-We recommend the use of VS Code on this session. This repo has some recommended extensions that will help you throughout the session. To find them search by `@recommended` on the **Extensions** menu, and see the **Workspace Recommendations** tab.
+1. Open a terminal window in `VS Code`.
+2. activate the virtual environment with the following command: `source code-puzzles-python/bin/activate`
+3. Run the test runner to validate setup: `pytest`
+4. The unit tests should be running indicating setup is complete.
